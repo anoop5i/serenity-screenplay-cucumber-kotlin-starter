@@ -7,16 +7,13 @@ import cucumber.api.java.Before
 import cucumber.api.java.en.Given
 import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
-import net.serenitybdd.screenplay.EventualConsequence
 import net.serenitybdd.screenplay.EventualConsequence.eventually
-import net.serenitybdd.screenplay.GivenWhenThen
 import net.serenitybdd.screenplay.GivenWhenThen.seeThat
 import net.serenitybdd.screenplay.actors.OnStage
 import net.serenitybdd.screenplay.actors.OnStage.theActorCalled
 import net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight
 import net.serenitybdd.screenplay.actors.OnlineCast
 import org.hamcrest.Matchers
-import org.joni.SearchAlgorithm
 
 class CucumberSteps {
 
