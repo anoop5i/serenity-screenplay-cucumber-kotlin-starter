@@ -1,8 +1,6 @@
 package com.serenity.steps
 
 import com.serenity.questions.SearchQuestions
-import com.serenity.questions.SearchResult
-import com.serenity.tasks.SearchAction
 import com.serenity.tasks.SearchTasks
 import net.serenitybdd.junit.runners.SerenityRunner
 import net.serenitybdd.screenplay.Actor
