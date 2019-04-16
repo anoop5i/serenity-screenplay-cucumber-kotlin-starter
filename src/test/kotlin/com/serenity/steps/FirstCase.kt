@@ -1,7 +1,9 @@
 package com.serenity.steps
 
+import com.serenity.questions.SearchQuestions
 import com.serenity.questions.SearchResult
 import com.serenity.tasks.SearchAction
+import com.serenity.tasks.SearchTasks
 import net.serenitybdd.junit.runners.SerenityRunner
 import net.serenitybdd.screenplay.Actor
 import net.serenitybdd.screenplay.EventualConsequence.eventually
@@ -26,7 +28,7 @@ class FirstCase {
     fun runFirstTest() {
         actor.can(BrowseTheWeb.with(browser))
         actor.attemptsTo(Open.relativeUrl("http://www.google.com"))
-        actor.attemptsTo(SearchAction("test"))
-        actor.can(eventually(seeThat(SearchResult("Test"), Matchers.`is`(true))))
+        actor.attemptsTo(SearchTasks.search("test"))
+        actor.can(eventually(seeThat(SearchQuestions.containLink("Test"), Matchers.`is`(true))))
     }
 }
