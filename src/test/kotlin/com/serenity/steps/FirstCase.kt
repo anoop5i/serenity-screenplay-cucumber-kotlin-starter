@@ -1,5 +1,6 @@
 package com.serenity.steps
 
+import com.serenity.Logger
 import com.serenity.questions.SearchQuestions
 import com.serenity.tasks.SearchTasks
 import net.serenitybdd.junit.runners.SerenityRunner
@@ -16,6 +17,7 @@ import org.openqa.selenium.WebDriver
 
 @RunWith(SerenityRunner::class)
 class FirstCase {
+    companion object : Logger
 
     @Managed
     private val browser: WebDriver? = null
@@ -25,6 +27,7 @@ class FirstCase {
     @Test
     fun runFirstTest() {
         actor.can(BrowseTheWeb.with(browser))
+        logger().info(".........Logging starts here......")
         actor.attemptsTo(Open.relativeUrl("http://www.google.com"))
         actor.attemptsTo(SearchTasks.search("test"))
         actor.can(eventually(seeThat(SearchQuestions.containLink("Test"), Matchers.`is`(true))))
